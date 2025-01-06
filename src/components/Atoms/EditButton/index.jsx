@@ -7,5 +7,5 @@ export const Img = () => {
 
 export const SampleButton = (props) => {
     return <button onClick={props.onClick}><Img></Img>{props.label}</button>;
-  }
+}
   
