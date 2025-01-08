@@ -1,0 +1,13 @@
+.EditButton{
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+}
+
+.EditButton:hover{
+    background-color: rgba(184,184,184,0.2);
+}
