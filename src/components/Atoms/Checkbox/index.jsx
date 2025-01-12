@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import check from "../../../assets/svg/check.svg"
 
-// export const Img = () => {
-//     return <img src={check}></img>;
-// }
-
 export const Checkbox = (props) => {
     const [isHovered, setIsHovered] = useState(false);
     return <button
