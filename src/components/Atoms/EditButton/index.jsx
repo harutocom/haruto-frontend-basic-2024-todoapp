@@ -24,7 +24,8 @@ export const SampleButton = (props) => {
       : "transparent",
       border: "none",
       borderRadius: 50,
-      position: "relative"
+      position: "relative",
+      cursor: "pointer"
     }}
     ><Img></Img>{props.label}</button>;
 }
