@@ -1,5 +1,9 @@
+import styled from "styled-components";
 import React, { useState } from "react";
+import COLOR from "../../../variables/color";
 import plus from "../../../assets/svg/plus.svg"
+import TEXT from "../../../variables/texts";
+import FONTFAMILY from "../../../variables/font_family";
 
 export const Img = () => {
     return <img src={plus} style={{
@@ -16,16 +20,21 @@ export const AddTaskButton = (props) => {
     onMouseLeave={() => setIsHovered(false)}
     style={{
         padding: "2px 6px",
-        width: 126,
-        height: 24,
         borderRadius: 12,
         display: "flex",
         alignItems: "center",
         border: "none",
         gap: 10,
-        backgroundColor: isHovered ? "rgba(70, 163, 129, 0.2)" : "rgba(255, 0, 0, 0)"
+        backgroundColor: isHovered ? `${COLOR.GREEN_TRANSLUCENT}` : `${COLOR.GREEN_TRANSPARENT}`,
+        transition: "0.2s"
     }}
     ><Img></Img>
-    <span style={{color: '#46A381'}}>タスクを追加</span>
+    <StyledText>タスクを追加</StyledText>
     </button>;
 }
+
+const StyledText = styled.div`
+    color: ${COLOR.GREEN};
+    ${TEXT.S}
+    font-family: ${FONTFAMILY.NOTO_SANS};
+`; 
