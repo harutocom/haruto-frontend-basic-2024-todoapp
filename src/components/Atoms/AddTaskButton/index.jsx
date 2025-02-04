@@ -1,6 +1,9 @@
+import styled from "styled-components";
 import React, { useState } from "react";
 import COLOR from "../../../variables/color";
 import plus from "../../../assets/svg/plus.svg"
+import TEXT from "../../../variables/texts";
+import FONTFAMILY from "../../../variables/font_family";
 
 export const Img = () => {
     return <img src={plus} style={{
@@ -26,6 +29,12 @@ export const AddTaskButton = (props) => {
         transition: "0.2s"
     }}
     ><Img></Img>
-    <span style={{color: '#46A381'}}>タスクを追加</span>
+    <StyledText>タスクを追加</StyledText>
     </button>;
 }
+
+const StyledText = styled.div`
+    color: ${COLOR.GREEN};
+    ${TEXT.S}
+    font-family: ${FONTFAMILY.NOTO_SANS};
+`; 
