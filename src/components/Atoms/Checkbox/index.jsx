@@ -16,7 +16,8 @@ export const Checkbox = (props) => {
         backgroundImage: isHovered
         ? `url(${check})`
         : "none",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        cursor: "pointer"
     }}
     ></button>
 }
