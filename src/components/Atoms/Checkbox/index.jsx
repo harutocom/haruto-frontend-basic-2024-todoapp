@@ -21,3 +21,5 @@ export const Checkbox = (props) => {
     }}
     ></button>
 }
+
+export default Checkbox;

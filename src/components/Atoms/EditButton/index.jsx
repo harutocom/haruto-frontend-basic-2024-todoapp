@@ -8,7 +8,7 @@ export const Img = () => {
   />;
 }
 
-export const SampleButton = (props) => {
+export const EditButton = (props) => {
   const [isHovered, setIsHovered] = useState(false);
     return <button
     onClick={props.onClick}
@@ -29,3 +29,5 @@ export const SampleButton = (props) => {
     }}
     ><Img></Img>{props.label}</button>;
 }
+
+export default EditButton;
