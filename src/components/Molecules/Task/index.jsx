@@ -17,6 +17,11 @@ const Task = ({ onTaskNameChange, onTaskComplete, taskName, defaultEditing }) =>
     const onEditButtonClick = () => {
         setIsEditing(true);
     }
+
+    if( !taskName ) {
+        taskName = 'taskname';
+    }
+
   return (
     <StyledWrapper> 
         <StyledCheckboxWrapper>
@@ -39,6 +44,7 @@ const Task = ({ onTaskNameChange, onTaskComplete, taskName, defaultEditing }) =>
 
 const StyledWrapper = styled.div`
     display: flex;
+    gap: 10px;
 `
 const StyledCheckboxWrapper = styled.div`
     
@@ -49,6 +55,8 @@ const StyledNameAndButtonWrapper = styled.div`
     width: 100%;
 `
 const StyledTaskName = styled.div`
+    margin-right: 10px;
+    width: 100%;
     line-height: 20px;
     color: ${COLOR.LIGHT_GRAY};
     font-size: 14px;
