@@ -18,10 +18,6 @@ const Task = ({ onTaskNameChange, onTaskComplete, taskName, defaultEditing }) =>
         setIsEditing(true);
     }
 
-    if( !taskName ) {
-        taskName = 'taskname';
-    }
-
   return (
     <StyledWrapper> 
         <StyledCheckboxWrapper>
