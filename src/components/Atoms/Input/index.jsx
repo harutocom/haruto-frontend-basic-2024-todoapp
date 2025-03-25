@@ -28,6 +28,7 @@ const Input = ({ onEditComplete, defaultValue }) => {
 
 const StyledInput = styled.input`
     box-sizing: border-box;
+    display: flex;
     padding: 0 4px;
     width: 100%;
     height: 20px;

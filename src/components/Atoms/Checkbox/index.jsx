@@ -4,12 +4,10 @@ import styled from 'styled-components';
 import COLOR from "../../../variables/color";
 
 export const Checkbox = ({ onClick }) => {
-    return <StyledButton
-    onClick={onClick}
-    ></StyledButton>
+    return <StyledCheckbox onClick={onClick}/>
 }
 
-const StyledButton = styled.button`
+const StyledCheckbox = styled.button`
     margin: 0;
     padding: 0;
     display: flex;

@@ -5,20 +5,24 @@ import COLOR from "../../../variables/color";
 
 
 export const Img = () => {
-  return <img src={pencil}
-  width={20}
-  height={20}
-  />;
+  return <StyledImg src={pencil}/>;
 }
 
 export const EditButton = ({ onClick, label }) => {
-    return <StyledButton
-    onClick={onClick}
-    className="EditButton"
-    ><Img/>{label}</StyledButton>;
+    return (
+      <StyledEditButton onClick={onClick}>
+        <Img/>
+        {label}
+      </StyledEditButton>
+  );
 }
 
-const StyledButton = styled.button`
+const StyledImg = styled.img`
+  width: 20px;
+  height: 20px;
+`
+
+const StyledEditButton = styled.button`
   padding: 0;
   display: flex;
   width: 20px;
