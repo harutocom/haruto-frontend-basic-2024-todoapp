@@ -5,14 +5,10 @@ import plus from "../../../assets/svg/plus.svg"
 import TEXT from "../../../variables/texts";
 import FONTFAMILY from "../../../variables/font_family";
 
-export const Img = () => {
-    return <StyledImg src={plus}/>;
-}
-
 export const AddTaskButton = ({ onClick }) => {
     return (
     <StyledAddTaskButton onClick={onClick}>
-        <Img/>
+        <StyledImg src={plus}/>
         <StyledText>タスクを追加</StyledText>
     </StyledAddTaskButton>
     );
