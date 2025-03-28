@@ -22,5 +22,3 @@ const StyledCheckbox = styled.button`
         cursor: pointer;
     }
 `
-
-export default Checkbox;
