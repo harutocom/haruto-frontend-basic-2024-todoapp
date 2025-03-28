@@ -8,11 +8,10 @@ export const Img = () => {
   return <StyledImg src={pencil}/>;
 }
 
-export const EditButton = ({ onClick, label }) => {
+export const EditButton = ({ onClick }) => {
     return (
       <StyledEditButton onClick={onClick}>
         <Img/>
-        {label}
       </StyledEditButton>
   );
 }
