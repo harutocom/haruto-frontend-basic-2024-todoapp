@@ -39,6 +39,7 @@ const Task = ({ onTaskNameChange, onTaskComplete, taskName, defaultEditing }) =>
 }
 
 const StyledWrapper = styled.div`
+    padding: 2px 6px;
     display: flex;
     gap: 10px;
 `
