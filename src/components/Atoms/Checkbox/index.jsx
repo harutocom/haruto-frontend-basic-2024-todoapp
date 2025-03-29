@@ -1,23 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import check from "../../../assets/svg/check.svg"
+import styled from 'styled-components';
+import COLOR from "../../../variables/color";
 
-export const Checkbox = (props) => {
-    const [isHovered, setIsHovered] = useState(false);
-    return <button
-    onClick={props.onClick}
-    onMouseEnter={() => setIsHovered(true)}
-    onMouseLeave={() => setIsHovered(false)}
-    style={{
-        width: 20,
-        height: 20,
-        backgroundColor: "transparent",
-        border: "2px solid #B8B8B8",
-        borderRadius: 2,
-        backgroundImage: isHovered
-        ? `url(${check})`
-        : "none",
-        backgroundSize: "cover",
-        cursor: "pointer"
-    }}
-    ></button>
+export const Checkbox = ({ onClick }) => {
+    return <StyledCheckbox onClick={onClick}/>
 }
+
+const StyledCheckbox = styled.button`
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid ${COLOR.LIGHT_GRAY};
+    border-radius: 2px;
+    &:hover{
+        background-image: url(${check});
+        background-size: cover;
+        cursor: pointer;
+    }
+`
