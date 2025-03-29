@@ -1,6 +1,6 @@
 import TodoCard from "./index";
 
-export default { Component: TodoCard};
+export default { component: TodoCard};
 export const Default = {
     args: {}
 };
