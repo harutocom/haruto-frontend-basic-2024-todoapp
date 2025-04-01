@@ -5,9 +5,10 @@ import Task from "../../Molecules/Task";
 import COLOR from "../../../variables/color";
 
 const TodoCard = () => {
-  const [taskList, setTaskList] = useState(
-    JSON.parse(localStorage.getItem("savedTaskList"))
-  );
+  const [taskList, setTaskList] = useState(() => {
+    const savedTaskList = localStorage.getItem("savedTaskList");
+    return savedTaskList ? JSON.parse(savedTaskList) : [];
+  });
 
   const onAddTaskButtonClick = () => {
     const newItem = { name: "", initializing: true };
@@ -37,16 +38,15 @@ const TodoCard = () => {
     <StyledWrapper>
       <AddTaskButton onClick={onAddTaskButtonClick} />
       <StyledTaskList>
-        {taskList.length > 0 &&
-          taskList.map((task, index) => (
-            <Task
-              key={index}
-              taskName={task.name}
-              defaultEditing={task.initializing}
-              onTaskComplete={() => onTaskComplete(index)}
-              onTaskNameChange={(value) => onTaskNameChange(value, index)}
-            />
-          ))}
+        {taskList.map((task, index) => (
+          <Task
+            key={index}
+            taskName={task.name}
+            defaultEditing={task.initializing}
+            onTaskComplete={() => onTaskComplete(index)}
+            onTaskNameChange={(value) => onTaskNameChange(value, index)}
+          />
+        ))}
       </StyledTaskList>
     </StyledWrapper>
   );
