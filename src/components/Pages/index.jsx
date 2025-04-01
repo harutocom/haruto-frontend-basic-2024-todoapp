@@ -3,7 +3,7 @@ import TodoCard from "../Organisms/TodoCard";
 import { Title } from "../Atoms/Title";
 import styled from "styled-components";
 
-const index = () => {
+const MainPage = () => {
   return (
     <StyledWrapper>
       <StyledTitleWrapper>
@@ -33,4 +33,4 @@ const StyledTodoCardWrapper = styled.div`
   max-width: 500px;
 `;
 
-export default index;
+export default MainPage;
