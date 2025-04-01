@@ -40,7 +40,7 @@ const TodoCard = () => {
               onTaskComplete={() => onTaskComplete(index)}
               onTaskNameChange={(value) => onTaskNameChange(value, index)}
             />
-          ))}{" "}
+          ))}
       </StyledTaskList>
     </StyledWrapper>
   );
