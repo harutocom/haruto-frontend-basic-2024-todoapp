@@ -1,8 +1,8 @@
 import React from "react";
-import TodoCard from "./index";
 import { AlertHandlerProvider } from "../../../contexts/alert_handler";
+import Alert from "./index";
 
-export default { component: TodoCard };
+export default { component: Alert };
 export const Default = {
   args: {},
 };

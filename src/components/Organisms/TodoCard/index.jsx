@@ -3,12 +3,14 @@ import styled from "styled-components";
 import AddTaskButton from "../../Atoms/AddTaskButton/index.jsx";
 import Task from "../../Molecules/Task";
 import COLOR from "../../../variables/color";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler.jsx";
 
 const TodoCard = () => {
   const [taskList, setTaskList] = useState(() => {
     const savedTaskList = localStorage.getItem("savedTaskList");
     return savedTaskList ? JSON.parse(savedTaskList) : [];
   });
+  const { setAlert } = useAlertHandlerContext();
 
   const onAddTaskButtonClick = () => {
     const newItem = { name: "", initializing: true };
@@ -22,6 +24,7 @@ const TodoCard = () => {
 
   const onTaskNameChange = (value, index) => {
     if (value === "") {
+      setAlert("タスクの名前が設定されていません。");
       onTaskComplete(index);
     } else {
       const newTaskList = [...taskList];
