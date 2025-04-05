@@ -2,18 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
 
 const Alert = () => {
+  const { errorText, visible } = useAlertHandlerContext();
   return (
-    <StyledWrapper>
-      <StyledAlert>index</StyledAlert>
+    <StyledWrapper visible={visible}>
+      <StyledAlert>{errorText}</StyledAlert>
     </StyledWrapper>
   );
 };
 
 const StyledWrapper = styled.div`
+  position: absolute;
+  transform: translateX(-50%);
+  top: 100px;
+  left: 50%;
   display: flex;
   justify-content: center;
+  opacity: ${(props) => {
+    props.visible ? 1 : 0;
+  }};
 `;
 
 const StyledAlert = styled.div`
