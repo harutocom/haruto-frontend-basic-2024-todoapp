@@ -15,14 +15,14 @@ const Alert = () => {
 
 const StyledWrapper = styled.div`
   position: absolute;
-  transform: translateX(-50%);
+  transform: ${(props) =>
+    props.visible ? "translate(-50%, 40%)" : "translate(-50%, 0%)"};
   top: 100px;
   left: 50%;
   display: flex;
   justify-content: center;
-  opacity: ${(props) => {
-    props.visible ? 1 : 0;
-  }};
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+  transition: 0.5s ease-in-out;
 `;
 
 const StyledAlert = styled.div`
